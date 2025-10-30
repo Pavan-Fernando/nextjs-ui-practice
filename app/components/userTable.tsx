@@ -3,6 +3,7 @@
 
 import { useMemo, useState } from 'react';
 import { Search, ChevronUp, ChevronDown } from 'lucide-react';
+import { mockUsers } from '../lib/mockUser';
 
 type User = {
     id: number;
@@ -12,13 +13,13 @@ type User = {
     status: 'Active' | 'Inactive';
 };
 
-const mockUsers: User[] = [
-    { id: 1, name: 'John Doe', email: 'john@example.com', role: 'Admin', status: 'Active' },
-    { id: 2, name: 'Jane Smith', email: 'jane@example.com', role: 'Editor', status: 'Active' },
-    { id: 3, name: 'Bob Johnson', email: 'bob@example.com', role: 'User', status: 'Inactive' },
-    { id: 4, name: 'Alice Brown', email: 'alice@example.com', role: 'Editor', status: 'Active' },
-    { id: 5, name: 'Charlie Davis', email: 'charlie@example.com', role: 'User', status: 'Inactive' },
-];
+// const mockUsers: User[] = [
+//     { id: 1, name: 'John Doe', email: 'john@example.com', role: 'Admin', status: 'Active' },
+//     { id: 2, name: 'Jane Smith', email: 'jane@example.com', role: 'Editor', status: 'Active' },
+//     { id: 3, name: 'Bob Johnson', email: 'bob@example.com', role: 'User', status: 'Inactive' },
+//     { id: 4, name: 'Alice Brown', email: 'alice@example.com', role: 'Editor', status: 'Active' },
+//     { id: 5, name: 'Charlie Davis', email: 'charlie@example.com', role: 'User', status: 'Inactive' },
+// ];
 
 type SortKey = keyof Pick<User, 'name' | 'email' | 'role' | 'status'>;
 type SortOrder = 'asc' | 'desc';
