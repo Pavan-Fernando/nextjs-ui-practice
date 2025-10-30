@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { Menu, X, Bell, User, LogOut, Settings, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 
-// Mock user state (replace with real auth later)
+// Mock user state (replace with real auth.ts later)
 const isLoggedIn = true; // Set to `false` to show guest
 const currentUser = isLoggedIn
     ? { name: 'John Doe', email: 'john@example.com', avatar: null }
